@@ -1,0 +1,14 @@
+# 开启 QUIC 地址发现端口（用于 NAT 打洞辅助）
+enable_quic_addr_discovery = true
+
+# 显式指定内网 HTTP 监听端口（仅仅为了避开 80）,在nginx反向代理并使用ssl的情况下，该端口没有用
+http_bind_addr = "0.0.0.0:3340"
+
+[tls]
+cert_mode = "Manual"
+# 必须配置，因为 QAD (QUIC) 握手强制要求读取证书
+manual_cert_path = "/nexalink-tunnel/cer/your_ssl_cer.crt"
+manual_key_path = "/nexalink-tunnel/cer/your_ssl_key.key"
+
+# 显式指定 QAD 内部监听的 UDP 端口（默认为 7830）
+quic_bind_addr = "0.0.0.0:7830"

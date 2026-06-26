@@ -17,15 +17,15 @@ use n0_error::{Result, StdResultExt};
 ///
 /// The ALPN, or application-layer protocol negotiation, is exchanged in the connection handshake,
 /// and the connection is aborted unless both endpoints pass the same bytestring.
-const ALPN: &[u8] = b"iroh-example/echo/0";
+const ALPN: &[u8] = b"ranyitech.com/vQKmKbeGD7dls9dfKD239";
 
 #[tokio::main]
 async fn main() -> Result<()> {
     tracing_subscriber::fmt::init();
-    let router = start_accept_side().await?;
+    //let router = start_accept_side().await?;
 
     // wait for the endpoint to be online
-    router.endpoint().online().await;
+    //router.endpoint().online().await;
 
     connect_side(router.endpoint().addr()).await?;
 

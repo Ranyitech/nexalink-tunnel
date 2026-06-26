@@ -21,12 +21,14 @@ crate-type = ["lib", "cdylib"]
 workspace = true
 
 [dependencies]
+tracing-subscriber = "0.3"
+serde_json = "1.0"
 backon = { version = "1.4" }
 blake3 = { version = "1.8.3", default-features = false }
 bytes = "1.11"
 ctutils = { version = "0.4.0", default-features = false }
 data-encoding = "2.2"
-
+lz4_flex = "0.11"
 derive_more = { version = "2.0.1", features = ["debug", "display", "from", "try_into", "deref", "from_str", "into_iterator"] }
 ed25519-dalek = { version = "=3.0.0-rc.0", features = ["serde", "rand_core", "zeroize", "pkcs8", "pem"] }
 http = "1"
@@ -223,6 +225,27 @@ required-features = []
 
 [[example]]
 name = "echo"
+required-features = []
+
+[[example]]
+name = "client"
+required-features = []
+
+
+[[example]]
+name = "tunnel-listen"
+required-features = []
+
+[[example]]
+name = "tunnel-send"
+required-features = []
+
+[[example]]
+name = "perf_server"
+required-features = []
+
+[[example]]
+name = "perf_client"
 required-features = []
 
 [[example]]
