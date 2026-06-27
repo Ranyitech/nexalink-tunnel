@@ -60,8 +60,8 @@ tracing-subscriber = "0.3"
 在生产环境部署时，建议使用 `--release` 参数进行编译，以获取最极致的 LZ4 编解码速度与传输能效：
 ```bash
 # 编译服务端与客户端
-cargo build --release --bin tunnel-listen
-cargo build --release --bin tunnel-send
+cargo build --release --bin tunnel-listen (Server)
+cargo build --release --bin tunnel-send (Client)
 ```
 
 ---
@@ -99,8 +99,8 @@ cargo build --release --bin tunnel-send
 ### 3. 查看帮助
 你可以通过 `--help` 或 `-h` 选项随时获取最新的命令行参数指南：
 ```bash
-./server --help
-./client --help
+./tunnel-listen --help
+./tunnel-send --help
 ```
 
 ---
