@@ -74,12 +74,12 @@ cargo build --release --bin tunnel-send (Client)
 
 在需要被暴露的内网服务器上运行服务端。
 
-*   **指定参数启动：**
-    例如：需要穿透位于内网 `127.0.0.1:11434` 的本地 AI 模型服务，限制只允许特定 EndpointID（白名单）连接，并设置自定义的隧道协议名称：
-    ```bash
-    ./tunnel-listen -l "127.0.0.1:11434" -w "c2381bc8c69ce7ca39804b9b3edb04c014170500866272867ccc0a7daae505ad" -a "ranyitech.com/port-forwarding/v1"
-    ```
-    *启动成功后，服务端会在控制台打印出一段永久有效的 JSON 格式地址，请将其安全地复制到客户端使用。*
+**指定参数启动：**
+例如：需要穿透位于内网 `127.0.0.1:11434` 的本地 AI 模型服务，限制只允许特定 EndpointID（白名单）连接，并设置自定义的隧道协议名称：
+```bash
+./tunnel-listen -l "127.0.0.1:11434" -w "c2381bc8c69ce7ca39804b9b3edb04c014170500866272867ccc0a7daae505ad" -a "ranyitech.com/port-forwarding/v1"
+```
+*启动成功后，服务端会在控制台打印出一段永久有效的 JSON 格式地址，请将其安全地复制到客户端使用。*
 
 ---
 
@@ -87,12 +87,12 @@ cargo build --release --bin tunnel-send (Client)
 
 在需要调用服务的外部客户端电脑上运行客户端。
 
-*   **自定义监听端口与 ALPN 连接：**
-    例如：连接服务端，并指定在外网本地绑定 `25444` 端口对外暴露：
-    ```bash
-    ./tunnel-send '<SERVER_JSON_ADDRESS>' -p "0.0.0.0:25444" -a "ranyitech.com/port-forwarding/v1"
-    ```
-    *启动成功后，你可以直接通过本地访问 `http://localhost:25444` 安全、稳定地调用远在内网的 AI 服务。*
+**自定义监听端口与 ALPN 连接：**
+例如：连接服务端，并指定在外网本地绑定 `25444` 端口对外暴露：
+```bash
+./tunnel-send '<SERVER_JSON_ADDRESS>' -p "0.0.0.0:25444" -a "ranyitech.com/port-forwarding/v1"
+```
+*启动成功后，你可以直接通过本地访问 `http://localhost:25444` 安全、稳定地调用远在内网的 AI 服务。*
 
 ---
 
