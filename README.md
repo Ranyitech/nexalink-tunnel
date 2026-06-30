@@ -110,4 +110,6 @@ cargo build --release --bin tunnel-send (Client)
 Nexalink 遵循开源协议，由**深圳市然壹科技有限公司**持续维护。我们致力于为企业提供低时延、抗丢包、高度可定制的边缘网络组网方案。
 
 *   **企业合作与商业授权咨询：** [support@ranyitech.com](mailto:support@ranyitech.com)
+*   **Telegram：** [https://t.me/+Yp84_6JC5bs2ZTYx](https://t.me/+Yp84_6JC5bs2ZTYx)
+*   **Discord：** [https://discord.com/invite/6ahykRb2b](https://discord.com/invite/6ahykRb2b)
 *   **官方网站：** [https://www.nexalink.link](https://www.nexalink.link)
